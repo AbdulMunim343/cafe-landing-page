@@ -3,7 +3,7 @@
  * 
  * Displays the coffee shop menu with a grid of menu items.
  * Features:
- * - Grid layout: 1 column on mobile, 2 columns on desktop
+ * - Card grid: 1 column on mobile, up to 5 columns on desktop
  * - 10 menu items displayed
  * - Section header with title and separator
  * - Call-to-action button
@@ -78,7 +78,7 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <section className="pt-12 pb-16 xl:pt-16 xl:pb-36">
+    <section id="menu" className="pt-12 pb-16 xl:pt-16 xl:pb-36">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="flex flex-col gap-4 mb-12 xl:mb-24">
@@ -96,8 +96,8 @@ const Menu = () => {
         
         {/* Menu Grid and Button */}
         <div className="flex flex-col items-center gap-12 xl:gap-24">
-          {/* Menu Items Grid - Responsive: 1 column mobile, 2 columns desktop */}
-          <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-y-8 gap-x-16 place-content-center">
+          {/* Menu Cards Grid - Responsive: 1 / 2 / 3 / 5 columns */}
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 xl:gap-8">
             {menuItems.map((item, index) => {
               const { name, description, price, imgSrc } = item;
               return (

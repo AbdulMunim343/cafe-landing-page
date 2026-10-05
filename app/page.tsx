@@ -7,7 +7,7 @@
  * - Dynamic imports for performance optimization
  * 
  * The page consists of multiple sections displayed in order:
- * Hero -> Explore -> About -> Menu -> Opening Hours -> Testimonials
+ * Hero -> Explore -> About -> Menu -> Opening Hours -> Location -> Testimonials
  */
 
 "use client"; // Required for using React hooks (useEffect)
@@ -16,6 +16,7 @@ import { useEffect } from "react";
 import About from "@/components/About";
 import Explore from "@/components/Explore/Explore";
 import Hero from "@/components/Hero";
+import Location from "@/components/Location";
 import Menu from "@/components/Menu/Menu";
 import OpeningHours from "@/components/OpeningHours";
 import Testimonials from "@/components/Testimonials";
@@ -61,6 +62,9 @@ const Home = () => {
       
       {/* Opening Hours Section: Business hours information */}
       <OpeningHours />
+      
+      {/* Location Section: Embedded map and contact details */}
+      <Location />
       
       {/* Testimonials Section: Customer reviews carousel */}
       <Testimonials />
